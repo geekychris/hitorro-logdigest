@@ -1,0 +1,41 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs and outputs
+*.log
+*.csv
+*.txt
+!src/**/*.txt
+
+# Build artifacts
+*.jar
+*.war
+*.ear
+*.class
+
+# Processed log files
+processed/
+output/
+summaries/

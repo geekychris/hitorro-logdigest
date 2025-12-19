@@ -1,0 +1,175 @@
+The url classification code in the original version of the log processor was a complete clusterfuck.
+Never have I seen such shoddy code as that, it actually took effort to obfuscate what the hell it was doing.
+
+Here are some notes with a single example of each "requestType"
+
+
+
+Player   uri=/player
+======
+
+example: origin-www.HiTorro.net/player/HiTorro-player.swf?bc=3F34K2L1
+
+Uses Last Part of path: Yes
+Has Parameters: [bc]
+
+Notes: Should there be other parameters?
+
+
+- Download  (audio player??) uri=/aplayer
+======
+
+example:
+ -DONE-> /origin-www.applevoicesshow.com/search/popup.php?content=http://media1.HiTorro.net/media/2007/06/PID_011588/HiTorro_Apple_WWDC_Steve_Jobs_Keynote_.flv&totalTime=3122000&postURL=http://www.HiTorro.net/home/3294/apple-wwdc-2007-steve-jobs-keynote-part-2-of-2%20%20%20%20%20%20%20%20%20%20%20%20&breadcrumb=b448bc43bda94d53bcba5140dff3c326&mp3ImageSrc=http://media1.HiTorro.net/media/2007/06/PID_011588/HiTorro_Apple_WWDC_Steve_Jobs_Keynote_.jpg&permalink=http://www.HiTorro.net&commentsLink=undefined&ispopup=true
+
+
+origin-www.HiTorro.net/aplayer/audio_player_slim.swf?playlist_url=http://www.HiTorro.net/audio/markradcliffe/AUDIO000.MP3.xspf%20&player_title=HiTorro.Net%20-%20Mark%20Radcliffe%20-%20Open%20Source%20Legal%20Guru
+/origin-www.nextgearshow.com/accom/20070131105305391854750.mp3
+/origin-www.nextgearshow.com/accom/20070131101058366582749.mp3
+/origin-www.HiTorro.net/audio/adTech2006/042606_adtech_oddcast_Ken_Hartmann_HiTorro.mp3
+/origin-www.HiTorro.net/aplayer/emff_comments.swf?src=http://www.macchianera.net/images/galeazzi-canottaggio.mp3
+/origin-www.HiTorro.net/home/aplayer/emff_comments.swf?src=http://www.macchianera.net/images/galeazzi-canottaggio.mp3
+/origin-www.HiTorro.net/aplayer/emff_comments.swf?src=http://www.macchianera.net/images/galeazzi-canottaggio.mp3
+
+
+Uses Last Part of path:
+
+Has Parameters:
+
+Notes: This could be a really bad url I used here as its a player, this example looks uninteresting, probably need another example!!!!
+
+
+
+ProvisionChild uri=/breadcrumb/provisionChild
+======
+
+example: origin-services.HiTorro.net/breadcrumb/provisionChild?parent=bc9d1e39c494440e8d963774c3bee8fc
+
+Uses Last Part of path: Yes
+Has Parameters: parent
+
+Notes: part of /breadcrumb/<action>
+
+
+Playlist uri=/breadcrumb/playlist
+======
+
+example: origin-services.HiTorro.net/breadcrumb/playlist/925ba603a5804f7b98562231b629a2b5/PID_011808
+
+Uses Part of path: Yes but not last part
+Has Parameters: yes as part of path
+
+Notes: part of /breadcrumb/<action>
+
+
+
+- Hostingsite uri=/ping/hostingsite
+======
+
+example: origin-services.HiTorro.net/ping/hostingsite?breadcrumb=925ba603a5804f7b98562231b629a2b5&hosturl=http%3A%2F%2Fwww%2Ejaiku%2Ecom%2Fblog%2F
+
+
+Uses Last Part of path: Yes, last part, OR part of /ping/<action>
+
+Has Parameters: breadcrumb
+
+Notes: Have no idea what its used for
+
+
+
+- UserAction X  uri=/ping/useraction
+======
+
+example: origin-services.HiTorro.net/ping/useraction?action=play&breadcrumb=f007c9881bed4c4dbc9983fd37815b03&mediaId=PID_013171&time=0
+
+Uses Last Part of path: /ping/useraction
+
+Has Parameters: action, breadcrumb, mediaid, time
+
+
+
+
+- Beacon (uri=*/HiTorro_beacon.gif)
+======
+
+example: origin-www.HiTorro.net/home/technology/2149/%5C%22http:/media1.HiTorro.net/graphics/HiTorro_beacon.gif?p=/home/technology/2149/netgear-introduces-gigabit-speed-to-their-stackable-smart-switches%5C%22
+
+Uses Last Part of path: No
+
+
+- Resource
+======  uri/*.[resource extension] or some other extensions.
+
+example: origin-iphone.HiTorro.net/techone/iui/options-extend.png
+
+Uses Last Part of path: yes anything that ends with an image, swf txt, ico, some other extension
+
+Notes: Just chuck it
+
+Feed    uri=/feed or uri=*/feed
+======
+
+example:  origin-www.HiTorro.net/wp-rss2.php?category_name=InfoTalk&feed=rss2
+/origin-www.nextgearshow.com/1783/gms-lansing-delta-township-plant/feed/
+/origin-www.nextgearshow.com/feed
+/origin-www.nextgearshow.com/feed/atom/
+
+Uses Last Part of path: Not sure if wp-rss2.php is sufficient, or it must be an argument of feed=
+Has Parameters: feed
+
+mediaother
+======
+
+example:
+
+Uses Last Part of path:
+Notes: Not sure what we are really doing here, is this considered trash or should we be tracking this, what do we expect?  Didnt find an example
+
+- Comment
+======
+
+example: origin-www.HiTorro.net/scobleshow/wp-comments-post.php
+
+Uses Last Part of path: yes last part of path is "wp-comments-post.php"
+
+Junk
+======
+
+example:
+/origin-www.HiTorro.net/player/null
+/origin-www.HiTorro.net/home/player/null
+/origin-www.HiTorro.net/player/null
+/origin-www.HiTorro.net/home/player/null
+/origin-www.HiTorro.net/player/HiTorro-player.swd?bc=1df313d0-ad44-4742-96b4-158bdd5952be
+/origin-www.HiTorro.net/home/player/HiTorro-player.swd?bc=1df313d0-ad44-4742-96b4-158bdd5952be
+
+Uses Last Part of path:
+Notes...well this could be a lot more, but seems to be player.swd, overlay.swd, breadcrumb.hostingsite, player/null (which occurs a lot)
+
+postpage
+======
+
+example: origin-iphone.HiTorro.net/rebootshow/news_item.php?guid=http://0xg3458.hub.io/pb.php?
+
+Uses Last Part of path:
+
+Notes, when we didnt find anything else, its a post page (at least in the current logic).
+
+
+exceptions:
+
+Stack:
+     java.lang.String.charAt(String.java:558)
+     ht.util.url.UrlCursor.skipProtocol(UrlCursor.java:294)
+     ht.util.url.UrlCursor.setUrl(UrlCursor.java:55)
+     ht.util.url.UrlMemoryCursor.scan(UrlMemoryCursor.java:31)
+     ht.logdigest.requestclassifier.DownloadClassifier.classify(DownloadClassifier.java:46)
+     ht.logdigest.requestclassifier.ClassifierContext.classify(ClassifierContext.java:156)
+     ht.logdigest.LogFileProcessor.processLogLine(LogFileProcessor.java:278)
+     ht.logdigest.LogFileProcessor.processLogFile(LogFileProcessor.java:131)
+     ht.logdigest.LogProcessor.processLogFiles(LogProcessor.java:101)
+     ht.logdigest.LogDigesterTestService.start(LogDigesterTestService.java:132)
+     ht.util.service.ServiceContext.init(ServiceContext.java:284)
+     ht.util.cmdline.CommandLine.executeCommand(CommandLine.java:228)
+     ht.util.cmdline.CommandLine.mainAux(CommandLine.java:111)
+     ht.util.cmdline.CommandLine.main(CommandLine.java:68) for url: /origin-www.HiTorro.net/player/popup.php?content=http
