@@ -160,16 +160,16 @@ exceptions:
 
 Stack:
      java.lang.String.charAt(String.java:558)
-     ht.util.url.UrlCursor.skipProtocol(UrlCursor.java:294)
-     ht.util.url.UrlCursor.setUrl(UrlCursor.java:55)
-     ht.util.url.UrlMemoryCursor.scan(UrlMemoryCursor.java:31)
+     com.hitorro.util.url.UrlCursor.skipProtocol(UrlCursor.java:294)
+     com.hitorro.util.url.UrlCursor.setUrl(UrlCursor.java:55)
+     com.hitorro.util.url.UrlMemoryCursor.scan(UrlMemoryCursor.java:31)
      ht.logdigest.requestclassifier.DownloadClassifier.classify(DownloadClassifier.java:46)
      ht.logdigest.requestclassifier.ClassifierContext.classify(ClassifierContext.java:156)
      ht.logdigest.LogFileProcessor.processLogLine(LogFileProcessor.java:278)
      ht.logdigest.LogFileProcessor.processLogFile(LogFileProcessor.java:131)
      ht.logdigest.LogProcessor.processLogFiles(LogProcessor.java:101)
      ht.logdigest.LogDigesterTestService.start(LogDigesterTestService.java:132)
-     ht.util.service.ServiceContext.init(ServiceContext.java:284)
-     ht.util.cmdline.CommandLine.executeCommand(CommandLine.java:228)
-     ht.util.cmdline.CommandLine.mainAux(CommandLine.java:111)
-     ht.util.cmdline.CommandLine.main(CommandLine.java:68) for url: /origin-www.HiTorro.net/player/popup.php?content=http
+     com.hitorro.util.service.ServiceContext.init(ServiceContext.java:284)
+     com.hitorro.util.cmdline.CommandLine.executeCommand(CommandLine.java:228)
+     com.hitorro.util.cmdline.CommandLine.mainAux(CommandLine.java:111)
+     com.hitorro.util.cmdline.CommandLine.main(CommandLine.java:68) for url: /origin-www.HiTorro.net/player/popup.php?content=http
