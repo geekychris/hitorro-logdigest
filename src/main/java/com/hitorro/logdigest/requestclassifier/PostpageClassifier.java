@@ -27,7 +27,6 @@ import com.hitorro.util.urlparser.UrlCursorParameter;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 26, 2005 Time: 11:25:29 AM Looking for
  * postpage
  * <p/>
  * POST ID (not HiTorro id)

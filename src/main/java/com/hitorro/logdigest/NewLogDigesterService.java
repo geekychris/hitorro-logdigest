@@ -36,7 +36,6 @@ import com.hitorro.util.json.keys.BasefileProperty;
 import com.hitorro.util.startupframework.phases.ServiceDefinition;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 14, 2008 Time: 7:57:20 AM
  */
 @ServiceDefinition(dependentService = {},
         shortName = "newlogdigest",

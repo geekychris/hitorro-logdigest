@@ -27,7 +27,6 @@ import com.hitorro.util.io.largedata.BaseFileAccessingObjectFactory;
 import java.util.Comparator;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 2, 2008 Time: 11:30:08 AM
  */
 
 public class IntTupleFactory extends BaseFileAccessingObjectFactory<IntTuple> {

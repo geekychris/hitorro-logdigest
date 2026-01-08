@@ -26,7 +26,6 @@ import com.hitorro.util.core.Console;
 import com.hitorro.util.core.string.StringUtil;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 3, 2008 Time: 10:13:18 AM Old line
  * processing code.
  */
 public class OldClassifier {

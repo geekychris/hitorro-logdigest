@@ -37,7 +37,6 @@ import java.util.Arrays;
 import java.util.Queue;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 6:31:50 PM ordinal and a
  * byte type aggregator
  */
 public abstract class IntByteComboAggregator implements Aggregator<NewLogLine, IntByteTuple> {

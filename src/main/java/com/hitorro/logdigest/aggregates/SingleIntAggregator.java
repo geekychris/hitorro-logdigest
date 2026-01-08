@@ -38,7 +38,6 @@ import java.util.Queue;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 4:58:41 PM
  */
 public abstract class SingleIntAggregator implements Aggregator<NewLogLine, IntTuple> {
     private TIntIntHashMap m_map = new TIntIntHashMap();

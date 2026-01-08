@@ -25,7 +25,6 @@ import com.hitorro.util.io.largedata.compressedstreams.FSOutputStream;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 17, 2005 Time: 12:19:26 PM
  */
 public class LogWriter {
     private FSOutputStream os;

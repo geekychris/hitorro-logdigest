@@ -32,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 21, 2005 Time: 6:39:48 PM
  */
 public class ClassifierContext {
     private static final boolean log = false;

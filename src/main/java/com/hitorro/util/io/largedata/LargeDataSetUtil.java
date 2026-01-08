@@ -31,8 +31,7 @@ import com.hitorro.logdigest.NewLogLine;
 import java.io.IOException;
 import java.util.Comparator;
 
-/**
- */
+
 public class LargeDataSetUtil {
 
     /**

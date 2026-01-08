@@ -41,7 +41,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 3, 2008 Time: 12:27:24 PM
  */
 public class AggregationHierarchyQuery<T extends CompressedStreamIO> {
     public static final String Merged = "merged.";

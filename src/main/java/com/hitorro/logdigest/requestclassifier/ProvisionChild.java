@@ -27,7 +27,6 @@ import com.hitorro.util.urlparser.UrlCursorParameters;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 25, 2005 Time: 11:20:03 AM We care about
  * the referrer and we care about the parent BC, which gets assigned to the bc field.
  */
 public class ProvisionChild extends Classifier {

@@ -30,7 +30,6 @@ import com.hitorro.util.io.largedata.compressedstreams.aggregator.AggregatorTupl
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 7:51:07 PM
  */
 public class IntByteTuple extends AggregatorTuple {
     /**

@@ -32,7 +32,6 @@ import java.util.Calendar;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 31, 2005 Time: 9:24:27 AM
  */
 public class LogDigesterUtil {
 

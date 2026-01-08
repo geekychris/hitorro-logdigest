@@ -25,7 +25,6 @@ import com.hitorro.logdigest.MediaTypeEnum;
 import com.hitorro.util.io.csv.formatters.CSVByteFormatter;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 16, 2008 Time: 3:37:29 PM
  */
 public class CSVMediaTypeFormatter extends CSVByteFormatter {
     public String format(byte value) {

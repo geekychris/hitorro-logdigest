@@ -32,7 +32,6 @@ import com.hitorro.util.io.largedata.compressedstreams.aggregator.Aggregator;
 import java.util.Queue;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 2, 2008 Time: 1:08:38 PM Somewhat of a
  * dummy aggregator as currently this aggregator does not create mserlog's.  Simply its a flyweight for others to depend
  * on.
  */

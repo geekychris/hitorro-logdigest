@@ -33,7 +33,6 @@ import com.hitorro.util.commandandcontrol.ano.CommandDef;
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 14, 2008 Time: 7:53:33 AM
  */
 @CommandDef(command = "logdigester.processlogs", description = "Process any outstanding log files and turn them into serlog format")
 public class ProcessLogsCommand extends Command {

@@ -28,7 +28,6 @@ import com.hitorro.util.basefile.tools.direnum.DateEnumAction;
 import com.hitorro.util.io.largedata.compressedstreams.aggregator.AggregationUtil;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 3, 2008 Time: 8:52:56 AM
  */
 public class EnsureMergedSerLog implements DateEnumAction {
     private BaseFile dbDir;

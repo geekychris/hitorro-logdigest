@@ -27,7 +27,6 @@ import gnu.trove.map.hash.TByteObjectHashMap;
 import java.util.HashMap;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 12, 2005 Time: 11:36:47 AM
  */
 public enum HttpMethodEnum {
     GET("GET", 0),

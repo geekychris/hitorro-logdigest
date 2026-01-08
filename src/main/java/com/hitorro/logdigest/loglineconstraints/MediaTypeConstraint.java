@@ -30,7 +30,6 @@ import java.util.Arrays;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 4:11:26 PM
  */
 public class MediaTypeConstraint implements HTPredicate<NewLogLine> {
     private byte types[];

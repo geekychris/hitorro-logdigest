@@ -32,7 +32,6 @@ import com.hitorro.util.io.csv.formatters.CSVIntFormatter;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 5:24:39 PM
  */
 public class MediaIdAggregator extends SingleIntAggregator {
 

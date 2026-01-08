@@ -30,7 +30,6 @@ import java.util.Arrays;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 3:33:20 PM
  */
 public class RequestTypeConstraint implements HTPredicate<NewLogLine> {
     private byte types[];

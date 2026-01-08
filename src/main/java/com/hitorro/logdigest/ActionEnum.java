@@ -25,7 +25,6 @@ package com.hitorro.logdigest;
 import com.hitorro.util.core.EnumContext;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 25, 2005 Time: 10:12:58 AM
  */
 public enum ActionEnum {
     PLAY("PLAY", 0),

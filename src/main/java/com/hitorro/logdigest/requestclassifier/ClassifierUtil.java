@@ -27,7 +27,6 @@ import com.hitorro.util.urlparser.TLDMatcher;
 import com.hitorro.util.urlparser.TokenKey;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 24, 2005 Time: 6:13:35 PM
  */
 public class ClassifierUtil {
 

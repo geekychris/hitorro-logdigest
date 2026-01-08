@@ -31,7 +31,6 @@ import java.io.IOException;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 2:29:52 PM
  */
 public class LogLineWriter {
     private COutputStream fsOutputStream;

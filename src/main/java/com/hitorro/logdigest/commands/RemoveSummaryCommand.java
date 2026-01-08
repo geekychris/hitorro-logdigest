@@ -34,7 +34,6 @@ import com.hitorro.util.io.largedata.RemoveSummary;
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 14, 2008 Time: 8:10:36 AM
  */
 @CommandDef(command = "logdigester.removesummary", description = "Remove all log summary files.")
 public class RemoveSummaryCommand extends Command {

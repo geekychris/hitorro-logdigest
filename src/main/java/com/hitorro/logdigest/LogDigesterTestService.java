@@ -24,7 +24,6 @@ package com.hitorro.logdigest;
 import com.hitorro.util.startupframework.phases.ServiceDefinition;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 12, 2005 Time: 9:41:28 AM
  */
 @ServiceDefinition(dependentService = {NewLogDigesterService.class},
         shortName = "logdigesttest",

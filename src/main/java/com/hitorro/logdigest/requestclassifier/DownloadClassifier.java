@@ -28,7 +28,6 @@ import com.hitorro.util.urlparser.UrlCursorParameters;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 23, 2005 Time: 10:02:34 AM Anything that
  * is considered a download, must further be refined to know the pid if it has one.
  * <p/>
  * <p/>

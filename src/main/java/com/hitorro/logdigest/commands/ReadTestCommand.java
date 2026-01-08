@@ -39,7 +39,6 @@ import com.hitorro.util.io.largedata.compressedstreams.aggregator.AggregationUti
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 14, 2008 Time: 8:15:45 AM
  */
 @CommandDef(command = "logdigester.readallserlog", description = "test command to ensure that all serlogs can be read")
 public class ReadTestCommand extends Command {

@@ -29,7 +29,6 @@ import com.hitorro.util.io.csv.formatters.CSVFormatter;
 import com.hitorro.util.io.csv.formatters.CSVIntFormatter;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 16, 2008 Time: 2:25:09 PM
  */
 public class RequestTypeAggregator extends SingleIntAggregator {
     private static String[] Header = new String[]{"RequestId", "Frequency"};

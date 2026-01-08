@@ -29,7 +29,6 @@ import com.hitorro.util.io.largedata.compressedstreams.COutputStream;
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 12, 2005 Time: 1:17:16 PM basic methods
  * of a log line that provide numeric based representations of fields we care about.
  */
 public abstract class LogLineBase implements Comparable<LogLineBase>, CompressedStreamIO {

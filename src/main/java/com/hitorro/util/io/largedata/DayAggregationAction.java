@@ -30,7 +30,6 @@ import com.hitorro.util.io.largedata.compressedstreams.aggregator.Aggregator;
 import java.util.Queue;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 3, 2008 Time: 3:13:30 PM
  */
 public class DayAggregationAction implements DateEnumAction {
     private Queue<BaseFile> queue;

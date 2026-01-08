@@ -40,7 +40,6 @@ import com.hitorro.util.json.keys.IntegerProperty;
 import com.hitorro.util.json.keys.StringProperty;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 16, 2008 Time: 10:56:49 AM
  */
 @CommandDef(command = "logdigester.runaggregate", description = "Run an aggregator")
 public class RunAggregate extends com.hitorro.util.commandandcontrol.Command {

@@ -30,7 +30,6 @@ import com.hitorro.util.io.csv.formatters.CSVFormatter;
 import com.hitorro.util.io.csv.formatters.CSVIntFormatter;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 7:34:46 PM
  */
 public class MediaIdMediaTypeAggregator extends IntByteComboAggregator {
     private static String[] Header = new String[]{"MediaId", "MediaType", "Frequency"};

@@ -24,7 +24,6 @@ package com.hitorro.logdigest;
 import com.hitorro.util.io.csv.CSVFormattedWriter;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 12, 2005 Time: 10:58:08 AM
  */
 public class NewLogLine extends LogLineBase {
     //  Apache Log Date Format

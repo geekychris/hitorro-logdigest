@@ -29,7 +29,6 @@ import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 24, 2005 Time: 11:19:26 AM Determine
  * user actions. If it is an action we need to extract: - breadcrumb - mediaId - time - action
  */
 public class ActionClassifier extends Classifier {

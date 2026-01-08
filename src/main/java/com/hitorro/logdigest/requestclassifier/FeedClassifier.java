@@ -24,7 +24,6 @@ package com.hitorro.logdigest.requestclassifier;
 import com.hitorro.logdigest.NewLogLine;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 28, 2005 Time: 4:34:43 PM
  */
 public class FeedClassifier extends Classifier {
     public static final String FeedString = "feed";

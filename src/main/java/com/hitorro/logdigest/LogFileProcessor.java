@@ -40,7 +40,6 @@ import java.util.zip.GZIPInputStream;
 
 /**
  * <p/>
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 10, 2005 Time: 2:12:37 PM
  */
 public class LogFileProcessor {
     public static final IntegerProperty BufferSize =

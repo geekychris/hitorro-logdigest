@@ -28,7 +28,6 @@ import com.hitorro.util.urlparser.UrlCursorParameters;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 24, 2005 Time: 6:15:04 PM
  * <p/>
  * Player will have a breadcrumb
  * <p/>

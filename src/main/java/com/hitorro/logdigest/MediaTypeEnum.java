@@ -24,7 +24,6 @@ package com.hitorro.logdigest;
 import com.hitorro.util.core.EnumContext;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 19, 2005 Time: 5:09:27 PM
  */
 public enum MediaTypeEnum {
     /**

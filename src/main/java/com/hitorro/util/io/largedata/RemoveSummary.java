@@ -27,7 +27,6 @@ import com.hitorro.util.basefile.tools.direnum.DateEnumAction;
 import com.hitorro.util.io.largedata.compressedstreams.aggregator.AggregationUtil;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 3, 2008 Time: 8:53:16 AM
  */
 public class RemoveSummary implements DateEnumAction {
     private BaseFile dbDir;

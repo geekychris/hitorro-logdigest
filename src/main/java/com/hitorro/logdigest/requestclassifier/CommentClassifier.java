@@ -25,7 +25,6 @@ import com.hitorro.logdigest.NewLogLine;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 24, 2005 Time: 10:53:57 AM Comments, as
  * if we care :-}
  */
 public class CommentClassifier extends Classifier {

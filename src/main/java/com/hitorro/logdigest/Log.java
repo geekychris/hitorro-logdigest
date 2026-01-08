@@ -24,7 +24,6 @@ package com.hitorro.logdigest;
 import com.hitorro.util.log.Logger;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Aug 1, 2005 Time: 10:38:50 AM
  */
 public class Log extends com.hitorro.util.core.Log {
     public static final Logger logdigest = Logger.getLogger("ht.logdigest");

@@ -30,7 +30,6 @@ import com.hitorro.util.io.largedata.compressedstreams.aggregator.AggregatorTupl
 import java.io.IOException;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 27, 2005 Time: 8:06:07 PM
  */
 public class IntTuple extends AggregatorTuple {
     public static final int EndPattern = 310687;

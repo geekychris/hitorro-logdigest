@@ -27,7 +27,6 @@ import com.hitorro.util.urlparser.TokenMatch;
 import com.hitorro.util.urlparser.UrlMemoryCursor;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Dec 21, 2005 Time: 7:07:04 PM
  * <p/>
  * Resources generally are anything that is downloaded as part of a pate request, but we care not to track.  Such as
  * images.
