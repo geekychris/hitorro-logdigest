@@ -32,7 +32,6 @@ import java.io.IOException;
 import java.util.Comparator;
 
 /**
- * Copyright (c) 2003 - present HiTorro All rights reserved. User: chris Date: Jan 2, 2008 Time: 1:35:26 PM To change this
  */
 public class LargeDataSetUtil {
 
