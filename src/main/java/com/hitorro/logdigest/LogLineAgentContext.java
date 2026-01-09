@@ -93,18 +93,18 @@ public class LogLineAgentContext {
         }
     };
     private final Map<Object, Object> m_agentUnknownTokens = new HashMap<Object, Object>();
-    String m_agentInner = Constants.EmptyString;
-    String m_agentOuterBegin = Constants.EmptyString;
-    String m_agentOuterEnd = Constants.EmptyString;
-    String[] m_agentInnerTokens = null;
-    int m_agentInnerTokenCnt = -1;
+    String agentInner = Constants.EmptyString;
+    String agentOuterBegin = Constants.EmptyString;
+    String agentOuterEnd = Constants.EmptyString;
+    String[] agentInnerTokens = null;
+    int agentInnerTokenCnt = -1;
     private String m_agent = null;
     private String m_application = Constants.EmptyString;
-    private String m_applicationName = Constants.EmptyString;
-    private int m_applicationVersion = -1;
+    private String applicationName = Constants.EmptyString;
+    private int applicationVersion = -1;
     private String m_platform = Constants.EmptyString;
-    private String m_platformName = Constants.EmptyString;
-    private int m_platformVersion = -1;
+    private String platformName = Constants.EmptyString;
+    private int platformVersion = -1;
 
     public LogLineAgentContext() {
     }
@@ -126,18 +126,18 @@ public class LogLineAgentContext {
      */
     private void clearAgent() {
         m_application = Constants.EmptyString;
-        m_applicationName = Constants.EmptyString;
-        m_applicationVersion = -1;
+        applicationName = Constants.EmptyString;
+        applicationVersion = -1;
 
         m_platform = Constants.EmptyString;
-        m_platformName = Constants.EmptyString;
-        m_platformVersion = -1;
+        platformName = Constants.EmptyString;
+        platformVersion = -1;
 
-        m_agentInner = Constants.EmptyString;
-        m_agentOuterBegin = Constants.EmptyString;
-        m_agentOuterEnd = Constants.EmptyString;
-        m_agentInnerTokens = null;
-        m_agentInnerTokenCnt = -1;
+        agentInner = Constants.EmptyString;
+        agentOuterBegin = Constants.EmptyString;
+        agentOuterEnd = Constants.EmptyString;
+        agentInnerTokens = null;
+        agentInnerTokenCnt = -1;
     }
 
     /**
@@ -150,7 +150,7 @@ public class LogLineAgentContext {
         int openParenIndex = -1;
         int closeParenIndex = -1;
 
-        if (StringUtil.nullOrEmptyString(m_agentOuterBegin)) {
+        if (StringUtil.nullOrEmptyString(agentOuterBegin)) {
             openParenIndex = m_agent.indexOf(TokenOpenParenthesis);
             closeParenIndex = m_agent.indexOf(TokenCloseParenthesis);
 
@@ -160,25 +160,25 @@ public class LogLineAgentContext {
                 int begin = 0;
                 int end = openParenIndex - 1;
                 if (end >= begin) {
-                    m_agentOuterBegin = m_agent.substring(begin, end);
+                    agentOuterBegin = m_agent.substring(begin, end);
                 }
 
                 begin = closeParenIndex + 1;
                 end = m_agent.length();
                 if (end >= begin) {
-                    m_agentOuterEnd = m_agent.substring(begin, end);
+                    agentOuterEnd = m_agent.substring(begin, end);
                 }
 
                 if (closeParenIndex > openParenIndex & openParenIndex > -1) {
-                    m_agentInner = m_agent.substring(openParenIndex + 1, closeParenIndex);
+                    agentInner = m_agent.substring(openParenIndex + 1, closeParenIndex);
                 }
 
-                if (!StringUtil.nullOrEmptyOrBlankString(m_agentInner)) {
-                    m_agentInnerTokens = StringUtil.tokenizeFromSingleChar(m_agentInner, ";", true);
-                    m_agentInnerTokenCnt = m_agentInnerTokens.length;
+                if (!StringUtil.nullOrEmptyOrBlankString(agentInner)) {
+                    agentInnerTokens = StringUtil.tokenizeFromSingleChar(agentInner, ";", true);
+                    agentInnerTokenCnt = agentInnerTokens.length;
                 }
             } else {
-                m_agentOuterBegin = m_agent;
+                agentOuterBegin = m_agent;
             }
         }
     }
@@ -194,39 +194,39 @@ public class LogLineAgentContext {
      * @return application from agent string
      */
     public String getApplication() {
-        if (StringUtil.nullOrEmptyString(m_agentOuterBegin)) {
+        if (StringUtil.nullOrEmptyString(agentOuterBegin)) {
             splitAgentString();
         }
 
-        if (!StringUtil.nullOrEmptyString(m_agentOuterBegin)) {
-            if (m_agentOuterBegin.startsWith(TokenMozilla)) {
-                if (m_agentInner.startsWith(TokenCompatible) && m_agentInnerTokenCnt > 1) {
-                    m_application = m_agentInnerTokens[1];
-                } else if (!StringUtil.nullOrEmptyString(m_agentOuterEnd)) {
-                    int lastSpaceIndex = m_agentOuterEnd.lastIndexOf(' ');
+        if (!StringUtil.nullOrEmptyString(agentOuterBegin)) {
+            if (agentOuterBegin.startsWith(TokenMozilla)) {
+                if (agentInner.startsWith(TokenCompatible) && agentInnerTokenCnt > 1) {
+                    m_application = agentInnerTokens[1];
+                } else if (!StringUtil.nullOrEmptyString(agentOuterEnd)) {
+                    int lastSpaceIndex = agentOuterEnd.lastIndexOf(' ');
 
-                    if (m_agentOuterEnd.charAt(m_agentOuterEnd.length() - 1) == ')') {
-                        int firstSpaceIndex = m_agentOuterEnd.lastIndexOf(' ', lastSpaceIndex - 1);
+                    if (agentOuterEnd.charAt(agentOuterEnd.length() - 1) == ')') {
+                        int firstSpaceIndex = agentOuterEnd.lastIndexOf(' ', lastSpaceIndex - 1);
 
                         if (firstSpaceIndex >= 0 && lastSpaceIndex >= 0 && lastSpaceIndex >= firstSpaceIndex) {
-                            m_application = m_agentOuterEnd.substring(firstSpaceIndex + 1, lastSpaceIndex);
+                            m_application = agentOuterEnd.substring(firstSpaceIndex + 1, lastSpaceIndex);
                         }
                     } else {
-                        m_application = m_agentOuterEnd.substring(lastSpaceIndex + 1);
+                        m_application = agentOuterEnd.substring(lastSpaceIndex + 1);
                     }
 
                 } else {
-                    if (m_agentInnerTokenCnt > 1) {
-                        m_application = m_agentInnerTokens[1];
+                    if (agentInnerTokenCnt > 1) {
+                        m_application = agentInnerTokens[1];
                     }
                 }
             } else {
-                int firstSpaceIndex = m_agentOuterBegin.indexOf(' ');
+                int firstSpaceIndex = agentOuterBegin.indexOf(' ');
 
                 if (firstSpaceIndex > 0) {
-                    m_application = m_agentOuterBegin.substring(0, firstSpaceIndex + 1);
+                    m_application = agentOuterBegin.substring(0, firstSpaceIndex + 1);
                 } else {
-                    m_application = m_agentOuterBegin;
+                    m_application = agentOuterBegin;
                 }
             }
         }
@@ -251,7 +251,7 @@ public class LogLineAgentContext {
             getApplication();
         }
 
-        if (StringUtil.nullOrEmptyString(m_applicationName)) {
+        if (StringUtil.nullOrEmptyString(applicationName)) {
             int begin = -1;
             char[] beginDelimiters = {' ', '/'};
             int end = getCharLocation(m_application, 0, beginDelimiters, Constants.ascii_numeric);
@@ -259,14 +259,14 @@ public class LogLineAgentContext {
 
             if (end > 0 && end < m_application.length()) {
                 begin = 0;
-                m_applicationName = m_application.substring(begin, end - 1);
+                applicationName = m_application.substring(begin, end - 1);
             } else {
-                m_applicationName = m_application;
+                applicationName = m_application;
             }
 
         }
 
-        return m_applicationName;
+        return applicationName;
     }
 
     /**
@@ -276,16 +276,16 @@ public class LogLineAgentContext {
      */
     public String getApplicationVersion() {
 
-        if (StringUtil.nullOrEmptyString(m_platformName)) {
+        if (StringUtil.nullOrEmptyString(platformName)) {
             getApplicationName();
         }
 
 
         String applicationVersion = Constants.EmptyString;
 
-        if (!StringUtil.nullOrEmptyString(m_applicationName)) {
+        if (!StringUtil.nullOrEmptyString(applicationName)) {
 
-            int begin = m_applicationName.length();
+            int begin = applicationName.length();
             int end = m_application.length();
 
 
@@ -370,12 +370,12 @@ public class LogLineAgentContext {
      * @return application from agent string
      */
     public String getPlatform() {
-        if (StringUtil.nullOrEmptyString(m_agentInner)) {
+        if (StringUtil.nullOrEmptyString(agentInner)) {
             splitAgentString();
         }
 
-        if (m_agentInnerTokenCnt > -1) {
-            if (StringUtil.nullOrEmptyString(m_applicationName)) {
+        if (agentInnerTokenCnt > -1) {
+            if (StringUtil.nullOrEmptyString(applicationName)) {
                 getApplicationName();
             }
 
@@ -383,11 +383,11 @@ public class LogLineAgentContext {
             byte lookupIndex = -1;
             Object lookupIndexObj = null;
 
-            if (m_agentInnerTokens[0].equals(TokenCompatible)) {
+            if (agentInnerTokens[0].equals(TokenCompatible)) {
                 lookupIndexObj = AgentApplicationPlatformMap.get(TokenCompatible);
             }
 
-            Object lookupIndexObjTmp = AgentApplicationPlatformMap.get(m_applicationName);
+            Object lookupIndexObjTmp = AgentApplicationPlatformMap.get(applicationName);
             if (lookupIndexObjTmp != null) {
                 lookupIndexObj = lookupIndexObjTmp;
             }
@@ -397,8 +397,8 @@ public class LogLineAgentContext {
                 lookupIndex = ((Integer) lookupIndexObj).byteValue();
             }
 
-            if (lookupIndex > -1 && lookupIndex < m_agentInnerTokenCnt) {
-                m_platform = m_agentInnerTokens[lookupIndex];
+            if (lookupIndex > -1 && lookupIndex < agentInnerTokenCnt) {
+                m_platform = agentInnerTokens[lookupIndex];
             }
 
         }
@@ -423,7 +423,7 @@ public class LogLineAgentContext {
             getPlatform();
         }
 
-        if (StringUtil.nullOrEmptyString(m_platformName)) {
+        if (StringUtil.nullOrEmptyString(platformName)) {
             int begin = -1;
             char[] beginDelimiters = {' ', '/'};
             int end = getCharLocation(m_platform, 0, beginDelimiters, Constants.ascii_numeric);
@@ -431,14 +431,14 @@ public class LogLineAgentContext {
 
             if (end > 0 && end < m_platform.length()) {
                 begin = 0;
-                m_platformName = m_platform.substring(begin, end - 1);
+                platformName = m_platform.substring(begin, end - 1);
             } else {
-                m_platformName = m_platform;
+                platformName = m_platform;
             }
 
         }
 
-        return m_platformName;
+        return platformName;
     }
 
     /**
@@ -449,14 +449,14 @@ public class LogLineAgentContext {
     public String getPlatformVersion() {
         String platformVersion = Constants.EmptyString;
 
-        if (StringUtil.nullOrEmptyString(m_platformName)) {
+        if (StringUtil.nullOrEmptyString(platformName)) {
             getPlatformName();
         }
 
 
-        if (!StringUtil.nullOrEmptyString(m_platformName)) {
+        if (!StringUtil.nullOrEmptyString(platformName)) {
 
-            int begin = m_platformName.length();
+            int begin = platformName.length();
             int end = m_platform.length();
 
 
