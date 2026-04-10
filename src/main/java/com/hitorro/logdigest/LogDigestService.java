@@ -26,9 +26,7 @@ import com.hitorro.network.rpc.cluster.ClusterService;
 import com.hitorro.util.startupframework.phases.ServiceDefinition;
 
 
-/**
- *
- */
+
 @ServiceDefinition(dependentService = {SchedulerService.class},
         shortName = "logdigest",
         description = "log digest service",

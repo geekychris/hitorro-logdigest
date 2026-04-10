@@ -21,7 +21,7 @@
  */
 package com.hitorro.logdigest.commands;
 
-import com.hitorro.jsontypesystem.JVS;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.hitorro.logdigest.LogFileProcessor;
 import com.hitorro.logdigest.NewLogDigesterService;
 import com.hitorro.logdigest.aggregates.MerglogAggregator;
@@ -54,7 +54,7 @@ public class RunAggregate extends com.hitorro.util.commandandcontrol.Command {
     @CommandArgument(required = false)
     private IntegerProperty quarter = new IntegerProperty("quarter", "day", -1);
 
-    public boolean execute(String rawValue, JVS args, com.hitorro.util.commandandcontrol.Response response, com.hitorro.util.commandandcontrol.CommandSession session) throws Exception {
+    public boolean execute(String rawValue, JsonNode args, com.hitorro.util.commandandcontrol.Response response, com.hitorro.util.commandandcontrol.CommandSession session) throws Exception {
         NewLogDigesterService ser = NewLogDigesterService.getService();
 
         if (ser == null) {
@@ -67,14 +67,18 @@ public class RunAggregate extends com.hitorro.util.commandandcontrol.Command {
         String agr = aggregate.apply(args);
         if (StringUtil.nullOrEmptyOrBlankString(agr)) {
             response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Error, "Aggregate name is required");
-            context.list(response);
+            for (Aggregator a : context.getAggregatorList()) {
+                response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Info, a.getFileExtension());
+            }
             response.end();
             return false;
         }
         Aggregator aggr = context.getAggregator(agr);
         if (aggr == null) {
             response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Error, Fmt.S("Aggregate does not exist: %s", agr));
-            context.list(response);
+            for (Aggregator a : context.getAggregatorList()) {
+                response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Info, a.getFileExtension());
+            }
             response.end();
             return false;
         }
@@ -97,7 +101,9 @@ public class RunAggregate extends com.hitorro.util.commandandcontrol.Command {
 
         if (!BaseFile.notNullAndExists(f)) {
             response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Error, "Aggregation file did not get created, check log.");
-            context.list(response);
+            for (Aggregator a : context.getAggregatorList()) {
+                response.addInfo(com.hitorro.util.commandandcontrol.InfoLevel.Info, a.getFileExtension());
+            }
             response.end();
             return false;
         }
