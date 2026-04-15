@@ -54,7 +54,7 @@ public enum HttpMethodEnum {
         return (HttpMethodEnum) m_ords.get(ord);
     }
 
-    public static int size() {
+    public static final int size() {
         return s_byShortName.size();
     }
 

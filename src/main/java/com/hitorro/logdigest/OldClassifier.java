@@ -29,7 +29,7 @@ import com.hitorro.util.core.string.StringUtil;
  * processing code.
  */
 public class OldClassifier {
-    public static byte handleRequestAndMediaTypeByte(String requestURI, int timestamp, NewLogLine entry) {
+    public static final byte handleRequestAndMediaTypeByte(String requestURI, int timestamp, NewLogLine entry) {
         byte requestType = Classifier.NA;
         int ix = -1;
         String mediaType = null;
@@ -132,7 +132,7 @@ public class OldClassifier {
         return requestType;
     }
 
-    public static final void handleBreadcrumbAndReferer(NewLogLine ll, String requestURI, int timeStamp, String referer) {
+    public static void handleBreadcrumbAndReferer(NewLogLine ll, String requestURI, int timeStamp, String referer) {
         // check if there is breadcrumb information
         String bc = null;
         int indx = -1;

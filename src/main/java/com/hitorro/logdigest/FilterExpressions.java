@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
  */
 public class FilterExpressions {
 
-    public static final StringProperty FilterFile =
+    public static StringProperty FilterFile =
             new StringProperty("logdigest.filterfile", "location of filters file", "filters.txt");
     private List<Pattern> _regularExpressions;
 

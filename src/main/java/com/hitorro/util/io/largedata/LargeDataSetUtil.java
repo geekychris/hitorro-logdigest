@@ -47,7 +47,7 @@ public class LargeDataSetUtil {
      * @return
      * @throws java.io.IOException
      */
-    public static final BaseFile mergeCompressedStreamIOFiles(BaseFile inputDir,
+    public static BaseFile mergeCompressedStreamIOFiles(BaseFile inputDir,
                                                               BaseFile outputDir,
                                                               String extension,
                                                               String outputExtension,
@@ -70,7 +70,7 @@ public class LargeDataSetUtil {
      * @return
      * @throws IOException
      */
-    public static final BaseFile mergeCompressedStreamIOFiles(BaseFile files[],
+    public static BaseFile mergeCompressedStreamIOFiles(BaseFile files[],
                                                               BaseFile outputDir,
                                                               String extension,
                                                               String outputExtension,

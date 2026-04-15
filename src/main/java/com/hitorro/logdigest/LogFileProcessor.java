@@ -42,14 +42,14 @@ import java.util.zip.GZIPInputStream;
  * <p/>
  */
 public class LogFileProcessor {
-    public static final IntegerProperty BufferSize =
+    public static IntegerProperty BufferSize =
             new IntegerProperty("logdigest.buffersize", "digester buffer size", 8192 * 256);
     //  Zip File suffix
     public static final String ZIP_SUFFIX = ".gz";
     // enable to compare the type codes output from the old vs new isQuestionClassifier
     private static final boolean assertIt = false;
     //  Error Log directory
-    public static String ERROR_LOG_PATH = "error";
+    public static final String ERROR_LOG_PATH = "error";
     public static int counter = 0;
     private static SimpleDateFormat LogDateFormat = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss Z");
     private static FilterExpressions _filters;

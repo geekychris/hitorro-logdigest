@@ -40,7 +40,7 @@ public abstract class LogLineBase implements Comparable<LogLineBase>, Compressed
     public static final int MEDIATYPE = 5;
     public static final int CATEGORY = 5;
     // bc     postid   HiTorro Id    request uri  actiontype    mediatype  category
-    public static final boolean options[][] = {{false, false, false, false, false, false, false},      //Beacon
+    public static boolean options[][] = {{false, false, false, false, false, false, false},      //Beacon
             {false, false, false, false, false, false, false},      //Resource
             {true, true, true, false, false, true, false},       //Download
             {true, false, false, true, false, false, false},      //hostingsite

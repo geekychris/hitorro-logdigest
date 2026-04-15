@@ -50,7 +50,7 @@ public class LogEntry {
     public LogEntry() {
     }
 
-    public static String getInsertColumns() {
+    public static final String getInsertColumns() {
         StringBuffer query = new StringBuffer("INSERT INTO ");
         query.append(DIGEST_TABLE);
         query.append(" (agent_id, bytes_sent, referer_id, remote_host_id, request_duration, request_method_id, request_protocol_id, " +

@@ -39,7 +39,7 @@ public abstract class Classifier {
     public static final byte ProvisionChild = 8;
     public static final byte Postpage = 9;
     public static final byte Feed = 10;
-    public static final String[] RequestTypes = new String[]{"Beacon",
+    public static String[] RequestTypes = new String[]{"Beacon",
             "Resource",
             "Download",
             "Hostingsite",

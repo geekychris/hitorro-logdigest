@@ -38,29 +38,29 @@ import java.util.List;
  */
 public class LogProcessor {
 
-    public static final BasefileProperty SourceDirectory =
+    public static BasefileProperty SourceDirectory =
             new BasefileProperty("logdigest.sourcedir", "directory of log files to be read", "");
 
-    public static final BasefileProperty DBDirectory =
+    public static BasefileProperty DBDirectory =
             new BasefileProperty("logdigest.dbdir", "directory of database files", "");
-    public static final BasefileProperty DestinationDirectory =
+    public static BasefileProperty DestinationDirectory =
             new BasefileProperty("logdigest.destdir", "directory where processed log files are written", "");
 
-    public static final BasefileProperty GeoIpFile =
+    public static BasefileProperty GeoIpFile =
             new BasefileProperty("logdigest.geoip.path", "path of geoip file", "");
 
 
-    public static final StringProperty AdminEmail =
+    public static StringProperty AdminEmail =
             new StringProperty("logdigest.admin.email", "admin email address", "steve@HiTorro.net");
-    public static final StringProperty MetricsHost =
+    public static StringProperty MetricsHost =
             new StringProperty("logdigest.db.metrics.host", "hostname of metrics database", "localhost");
-    public static final StringProperty MetricsDb =
+    public static StringProperty MetricsDb =
             new StringProperty("logdigest.db.metrics.dbname", "database name of metrics database", "HiTorrometrics");
-    public static final StringProperty MetricsDbUser =
+    public static StringProperty MetricsDbUser =
             new StringProperty("logdigest.db.metrics.user", "user of metrics database", "root");
-    public static final StringProperty MetricsDbPassword =
+    public static StringProperty MetricsDbPassword =
             new StringProperty("logdigest.db.metrics.pass", "password of metrics database", "root");
-    public static final BooleanProperty MetricsDoGeoip =
+    public static BooleanProperty MetricsDoGeoip =
             new BooleanProperty("logdigest.dogeoip", "whether to run the geoip work", false);
     //  Date Format to appear in error email
     private static final SimpleDateFormat _dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");

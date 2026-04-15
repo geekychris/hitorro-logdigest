@@ -38,7 +38,7 @@ public class AggregationUtil {
     public static final String MSerLogExt = "mserlog";
     public static final String SerLog = AggregationHierarchyQuery.Merged + MSerLogExt;
 
-    public static final boolean removeSummaryDir(BaseFile dbDir, int y, int m, int d) {
+    public static boolean removeSummaryDir(BaseFile dbDir, int y, int m, int d) {
         BaseFile sumDir = getSummaryDir(y, m, d, dbDir);
         try {
             sumDir.deleteContentOfDir(true);
@@ -49,7 +49,7 @@ public class AggregationUtil {
         return true;
     }
 
-    public static final boolean removeSummaryDir(BaseFile dbDir, int y, int m) {
+    public static boolean removeSummaryDir(BaseFile dbDir, int y, int m) {
         BaseFile sumDir = getSummaryDir(y, m, dbDir);
         try {
             sumDir.deleteContentOfDir(true);
@@ -60,7 +60,7 @@ public class AggregationUtil {
         return true;
     }
 
-    public static final boolean removeSummaryDir(BaseFile dbDir, int y) {
+    public static boolean removeSummaryDir(BaseFile dbDir, int y) {
         BaseFile sumDir = getSummaryDir(y, dbDir);
         try {
             sumDir.deleteContentOfDir(true);
@@ -87,7 +87,7 @@ public class AggregationUtil {
         return dbDir.getChild(Fmt.S("%s/%s/%s/logs", y, m, d));
     }
 
-    public static final BaseFile getPath(boolean logDir, BaseFile dbDir, String newFileName, int y, int m, int d) {
+    public static BaseFile getPath(boolean logDir, BaseFile dbDir, String newFileName, int y, int m, int d) {
         if (logDir) {
             return dbDir.getChild(Fmt.S("%s/%s/%s/logs/%s", y, m, d, newFileName));
         }
@@ -106,7 +106,7 @@ public class AggregationUtil {
      * @return
      * @throws IOException
      */
-    public static final BaseFile ensureBaseAggregateMerged(BaseFile dbDir, int y, int m, int d, BaseFileAccessingObjectFactory factory) throws Exception {
+    public static BaseFile ensureBaseAggregateMerged(BaseFile dbDir, int y, int m, int d, BaseFileAccessingObjectFactory factory) throws Exception {
         BaseFile log = getPath(false, dbDir, SerLog, y, m, d);
         if (BaseFile.notNullAndExists(log)) {
             return log;

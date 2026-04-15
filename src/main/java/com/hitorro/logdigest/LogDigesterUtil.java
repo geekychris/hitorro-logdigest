@@ -35,7 +35,7 @@ import java.util.Calendar;
  */
 public class LogDigesterUtil {
 
-    public static final LogLineWriter getWriter(NewLogLine ll,
+    public static LogLineWriter getWriter(NewLogLine ll,
                                                 BaseFile inputFile,
                                                 BaseFile dbDir,
                                                 BaseFileAccessingObjectFactory factory) throws IOException {

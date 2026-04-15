@@ -45,18 +45,18 @@ import com.hitorro.util.startupframework.phases.ServiceDefinition;
         uiDirectories = {})
 public class NewLogDigesterService {
 
-    public static final BasefileProperty LogDigesterLogfileDir = new BasefileProperty("logfiledir",
+    public static BasefileProperty LogDigesterLogfileDir = new BasefileProperty("logfiledir",
             "default log file location",
             "file://${HT_BIN}/testinput/ht/logdigest/LogDigesterTestService");
-    public static final BasefileProperty LogDigesterDBDir = new BasefileProperty("logdbdir",
+    public static BasefileProperty LogDigesterDBDir = new BasefileProperty("logdbdir",
             "default log file location",
             "file://${HT_HOME}/logdb");
 
-    public static final BasefileProperty LogDigesterProcessed = new BasefileProperty("logprocessed",
+    public static BasefileProperty LogDigesterProcessed = new BasefileProperty("logprocessed",
             "default log file location",
             "file://${HT_HOME}/logprocessed");
 
-    public static final BasefileProperty ErrorsFileDir = new BasefileProperty("errors",
+    public static BasefileProperty ErrorsFileDir = new BasefileProperty("errors",
             "location for errors",
             "file://${HT_HOME}/logprocessorerrors/errorFile");
     public static final String LogDigestKey = "logdigest";

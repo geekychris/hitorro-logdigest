@@ -72,7 +72,7 @@ public class Summary {
      * @param filename File name
      * @return Domain Name for specified file (look for prefix in filename)
      */
-    public static String getDomainByFileName(String filename) {
+    public static final String getDomainByFileName(String filename) {
         String result = null;
         if (filename.startsWith(LOG_FILE_AUDIO)) {
             result = DOMAIN_AUDIO;

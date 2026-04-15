@@ -31,15 +31,15 @@ import com.hitorro.util.urlparser.TokenKey;
 public class ClassifierUtil {
 
     public static final String PID = "PID_";
-    public static final TokenKey flyweight = new TokenKey("", -1);
-    public static final TokenKey HiTorro = new TokenKey("HiTorro.net", 1);
-    public static final TokenKey nextgearshow = new TokenKey("nextgearshow.com", 2);
-    public static final TokenKey rebootshow = new TokenKey("rebootshow.com", 3);
-    public static final TokenKey scobleshow = new TokenKey("scobleshow.com", 4);
-    public static final TokenKey marketingvoices = new TokenKey("marketingvoices.com", 5);
-    public static final TokenKey cesbloghaus = new TokenKey("cesbloghaus.com", 6);
-    public static final TokenKey applevoicesshow = new TokenKey("applevoicesshow.com", 7);
-    public static final TLDMatcher TLDMatcher = new TLDMatcher(flyweight, HiTorro, nextgearshow,
+    public static TokenKey flyweight = new TokenKey("", -1);
+    public static TokenKey HiTorro = new TokenKey("HiTorro.net", 1);
+    public static TokenKey nextgearshow = new TokenKey("nextgearshow.com", 2);
+    public static TokenKey rebootshow = new TokenKey("rebootshow.com", 3);
+    public static TokenKey scobleshow = new TokenKey("scobleshow.com", 4);
+    public static TokenKey marketingvoices = new TokenKey("marketingvoices.com", 5);
+    public static TokenKey cesbloghaus = new TokenKey("cesbloghaus.com", 6);
+    public static TokenKey applevoicesshow = new TokenKey("applevoicesshow.com", 7);
+    public static TLDMatcher TLDMatcher = new TLDMatcher(flyweight, HiTorro, nextgearshow,
             rebootshow, scobleshow, marketingvoices,
             cesbloghaus, applevoicesshow);
 
