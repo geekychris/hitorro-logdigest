@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Hitorro Logdigest logo" width="180">
+</p>
+
 # Hitorro Log Digest
 
 This is the **hitorro-logdigest** project, providing comprehensive web server log processing, analysis, and digest generation capabilities.
