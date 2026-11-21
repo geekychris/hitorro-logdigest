@@ -21,7 +21,7 @@
  */
 package com.hitorro.logdigest.commands;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import tools.jackson.databind.JsonNode;
 import com.hitorro.logdigest.LogFileProcessor;
 import com.hitorro.logdigest.NewLogDigesterService;
 import com.hitorro.logdigest.aggregates.MerglogAggregator;
